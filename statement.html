@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3 class="text-center font-bold">Home work JS</h3>
+        <hr />
+        <h3 class="text-center font-semibold">Deadline 24/05/2025</h3>
+        <div class="alert alert-warning">
+            Bài 1: Viết chương trình quản lý tuyển sinh
+        </div>
+        <div class="form-group">
+            <label>Nhập điểm môn 1:</label>
+            <input class="form-control w-25 d-inline" id="subject1" />
+        </div>
+        <div class="form-group">
+            <label>Nhập điểm môn 2:</label>
+            <input class="form-control w-25 d-inline" id="subject2" />
+        </div>
+        <div class="form-group">
+            <label>Nhập điểm môn 3:</label>
+            <input class="form-control w-25 d-inline" id="subject3" />
+        </div>
+        <div class="form-group">
+            <label>Nhập khu vực của bạn:</label>
+            <input class="form-control w-25 d-inline" id="area" />
+        </div>
+        <div class="form-group">
+            <label>Bạn thuộc đối tượng:</label>
+            <input class="form-control w-25 d-inline" id="identify" />
+        </div>
+        <button class="btn btn-dark ms-2" id="btnInKetQua" onclick="InKetQua()">In kết quả tuyển sinh</button>
+        <div class="alert alert-success mt-2" id="ketQuaBai1">
+        </div>
+
+    </div>
+    <div class="alert alert-warning">
+        Bài 2: Viết chương trình tính tiền điện tiêu thụ
+        <pre>
+                - 50Kw đầu: 500d/Kw
+                - 50Kw kế: 650d/Kw
+                - 100Kw kế: 850d/Kw  
+                - 150Kw kế: 1100d/Kw  
+                - Còn lại: 1300/Kw
+            </pre>
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group">
+        <label>Số tiền điện tiêu thụ tháng này:</label>
+        <input class="form-control w-25 d-inline" id="electAmount" />
+    </div>
+    <button class="btn btn-dark ms-2" id="btnInKetQuaB2" onclick="InKetQua2()">In hóa đơn</button>
+    </div>
+    <div class="alert alert-success mt-2" id="ketQuaBai2">
+    </div>
+
+    <div class="alert alert-warning">
+        Bài 3: Viết chương trình tính thuế thu nhập cá nhân
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group">
+        <label>Tên:</label>
+        <input class="form-control w-25 d-inline" id="electAmount" />
+    </div>
+    </div>
+    <div class="form-group">
+        <label>Tổng thu nhập năm:</label>
+        <input class="form-control w-25 d-inline" id="electAmount" />
+    </div>
+    </div>
+    <div class="form-group">
+        <label>Số người phụ thuộc:</label>
+        <input class="form-control w-25 d-inline" id="electAmount" />
+    </div>
+    <button class="btn btn-dark ms-2" id="btnInKetQuaB2" onclick="InKetQua2()">Xuất thuế</button>
+    </div>
+    <div class="alert alert-success mt-2" id="ketQuaBai2">
+    </div>
+
+    <div class="alert alert-warning">
+        Bài 4: Viết chương trình tính tiền cáp
+    </div>
+    <div class="form-group">
+        <label for="customerId">Mã khách hàng:</label>
+        <input type="text" class="form-control w-25" id="customerId">
+    </div>
+
+    <div class="form-group mt-2">
+        <label for="customerType">Loại khách hàng:</label>
+        <select class="form-control w-25" id="customerType" onchange="toggleConnectionField()">
+            <option value="residential">Nhà dân</option>
+            <option value="business">Doanh nghiệp</option>
+        </select>
+    </div>
+
+    <div class="form-group mt-2" id="connectionGroup" style="display: none;">
+        <label for="connectionCount">Số kết nối:</label>
+        <input type="number" class="form-control w-25" id="connectionCount" min="0">
+    </div>
+
+    <div class="form-group mt-2">
+        <label for="premiumChannels">Số kênh cao cấp:</label>
+        <input type="number" class="form-control w-25" id="premiumChannels" min="0">
+    </div>
+
+    <button class="btn btn-dark ms-2" onclick="calcCableBill()">Tính tiền cáp</button>
+
+    <div class="alert alert-success mt-2" id="cableBillResult"></div>
+    <hr />
+
+    <script src="/js//statement.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="/node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
